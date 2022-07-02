@@ -46,7 +46,33 @@ module.exports = {
       alias: {
         '@': resolve('src')
       }
-    }
+    },
+
+    // module: {
+    //   rules: [
+    //     {
+    //       test: /\.(css|less)$/,
+    //       use: [
+    //         {
+    //           loader: 'style-resource-loader',
+    //           options: {
+    //             patterns: [
+    //               resolve('./src/styles/var.less')
+    //             ]
+    //           }
+    //         }
+    //       ]
+    //     }
+    //   ]
+    // },
+
+    // plugin: [
+    //   new StylelintPlugin({
+    //     context: 'src',
+    //     files: ['**/*.{vue,html,css,less,scss,sass}'],
+    //     fix: true // autofix
+    //   })
+    // ]
   },
   chainWebpack(config) {
     // it can improve the speed of the first screen, it is recommended to turn on preload
